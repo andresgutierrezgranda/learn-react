@@ -2,6 +2,33 @@ import React, {Fragment} from 'react'
 import "./styles/styles.scss"
 import Curso from './Curso'
 
+const cursos = [
+    {
+        "title": "React desde cero",
+        "image": "https://img.freepik.com/vector-gratis/fondo-rojo-diseno-tecnologia-moderna_43969-1040.jpg?size=626&ext=jpg",
+        "price": 30,
+        "profesor": "Andrés"
+    },
+    {
+        "title": "Drupal desde cero",
+        "image": "https://www.movilzona.es/app/uploads/2019/03/fondos-fold.jpg",
+        "price": 40,
+        "profesor": "Pepe"
+    },
+    {
+        "title": "Go desde cero",
+        "image": "https://www.xtrafondos.com/wallpapers/cubos-3d-neon-3313.jpg",
+        "price": 50,
+        "profesor": "Norman"
+    },
+    {
+        "title": "Html desde cero",
+        "image": "https://www.logaster.com.es/blog/wp-content/uploads/sites/4/2019/01/4-min-620x350.jpg",
+        "price": 10,
+        "profesor": "Álvaro"
+    }
+]
+
 const App = () => 
 /*    
     <Fragment>
@@ -31,12 +58,9 @@ const App = () =>
     </div>
 
     <div className="ed-grid m-grid-3">
-        <Curso/>
-        <Curso/>
-        <Curso/>
-        <Curso/>
-        <Curso/>
-        <Curso/>
+        {
+            cursos.map( c => <Curso title={c.title} image={c.image} price={c.price} profesor={c.profesor}/> )
+        }
     </div>
 </Fragment>
 export default App;
